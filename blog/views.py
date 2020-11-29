@@ -1,12 +1,7 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
-<<<<<<< HEAD
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-=======
-from django.views.generic import ListView, DetailView, CreateView
->>>>>>> f99a36e29daf09a57d73702899369a4393f9a6a1
-
 from . import models
 
 posts = [
@@ -38,7 +33,6 @@ class PostListView(ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
-<<<<<<< HEAD
     
 
 class PostDetailView(DetailView):
@@ -81,18 +75,6 @@ class PostDeleteView(UserPassesTestMixin, LoginRequiredMixin, DeleteView):
             return True
         return False
 
-=======
-
-
-class PostDetailView(DetailView):
-    model = models.Post
-
-
-class PostCreateView(CreateView):
-    model = models.Post
-    fields = ['title', 'content']
-
->>>>>>> f99a36e29daf09a57d73702899369a4393f9a6a1
 
 def about(request):
     # return HttpResponse('<h1>Blog about</h1>')
