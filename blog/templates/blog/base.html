@@ -35,7 +35,10 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
                 {% if user.is_authenticated %}
+<<<<<<< HEAD
                    <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+=======
+>>>>>>> f99a36e29daf09a57d73702899369a4393f9a6a1
                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                    <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 {% else %}
